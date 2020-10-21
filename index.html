@@ -7,7 +7,7 @@
     <style>
     div{
        background-color: aqua;
-       width: 400px;
+       width: auto;
        border: 10px solid blue;
        padding: 20px;
        margin: 10px;
@@ -40,12 +40,17 @@
         display:table;
     }  
 
-      
+    .row:after{
+        content:" ";
+        display:table;
+        clear: both;
+    }  
+
     </style>
     <body>   
     
     <!--This adds conetnt to the heder class-->
-
+<div class="row">
     <div class="header">
         <h1>This is the Header</Header></h1>    
     </div>
