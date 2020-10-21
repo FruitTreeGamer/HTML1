@@ -38,18 +38,33 @@
         width: 40px;
         padding: 20px;
         display:table;
-    }       
+    }  
+
+    .row:after{
+        content:" ";
+        display:table;
+        clear: both;
+    }     
     </style>
     <body>   
     
     <!--This adds conetnt to the heder class-->
+
     <div class="header">
         <h1>This is the Header</Header></h1>    
     </div>
 
     <!--This adds content to the class coulumn-->
+<div class="row">
     <div class="column">
         <h2>This is a left .column</h2>
+    </div>
+
+     <!--adds conent to middle column-->
+    <div class="column">
+        <h2> my name is Cameron</h2>
+        <p> To make this website i used VSC with HTML this is the conetnet box for the middle column  </p>
+        <h4>Testing testing 123</h4>
     </div>
 
     <!--This Adds content to the class ColumnR-->
@@ -57,9 +72,6 @@
         <h3>This is The right column</h3>
     </div>
 
-    <h2> my name is Cameron</h2>
-    <h3> To make this website i used VSC with HTML this is the conetnet box for the middle column  </h3>
-    <h4>Testing testing 123</h4>
     <a href="pageStucture.html" title="Page 2">Lets go to page 2</a>
 
     
