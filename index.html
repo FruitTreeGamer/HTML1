@@ -22,6 +22,11 @@
 
     li {
       float: left;
+      border-right: black;
+    }
+
+    li:last-child{
+        border-right: none;
     }
 
     li a{
@@ -33,7 +38,7 @@
     }
     
 
-    li a:hover{ 
+    li a:hover:not(.active){ 
        
         background-color: darkkhaki;
         border-top: dimgrey;
