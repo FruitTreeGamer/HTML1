@@ -12,6 +12,22 @@
        padding: 20px;
        margin: 10px;
     }
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+    }
+
+    li {
+      float: left;
+    }
+
+    li a{
+        display: block;
+        padding: 8px;
+        background-color: darkgrey;
+    }
     </style>
     </head>
     <style>
@@ -66,7 +82,8 @@
      <!--adds conent to middle column-->
     <div class="column">
         <h2> my name is Cameron</h2>
-        <p> To make this website i used VSC with HTML this is the conetnet box for the middle column  </p>
+        <p> To make this website i used VSC with HTML this is the conetnet box for the middle column 
+         overflow:hidden is added to the ul element to prevent li elements from going outside of the list. </p>
         <h4>Testing testing 123</h4>
     </div>
 
@@ -76,6 +93,13 @@
     </div>
 
     <a href="pageStucture.html" title="Page 2">Lets go to page 2</a>
+
+    <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#news">News</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#about">About</a></li>
+      </ul>
 
     
     </body>
