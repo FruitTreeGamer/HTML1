@@ -17,6 +17,7 @@
       margin: 0;
       padding: 0;
       overflow: hidden;
+      background-color: darkgrey;
     }
 
     li {
@@ -25,12 +26,14 @@
 
     li a{
         display: block;
-        padding: 8px;
-        background-color: darkgrey;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;    
     }
     
 
-    .li:hover{ 
+    li a:hover{ 
        
         background-color: darkkhaki;
         border-top: dimgrey;
@@ -70,7 +73,11 @@
         padding: 20px;
         display:table;
     }
+    
 
+    .active {
+      background-color: #3ea841;
+    }
     </style>
     <body>   
     
@@ -100,14 +107,14 @@
     </div>
 
     
-    <div class = "li">
+    
     <ul>
-        <li><a href="#home">Home</a></li>
+        <li><a class="active" href="#home">Home</a></li>
         <li><a href="#news">News</a></li>
-        <li><a href="pageStucture.html" title="Page 2">Lets go to page 2</a></li>
+        <li style="float:right"><a href="pageStucture.html" title="Page 2">Lets go to page 2</a></li>
         <li><a href="#about">About</a></li>
-      </ul>
-    </div>
+    </ul>
+    
     
     </body>
     
