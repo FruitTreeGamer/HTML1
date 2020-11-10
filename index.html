@@ -22,7 +22,8 @@
     box-sizing: border-box;
    }
     body {
-        margin: 5;
+        padding: 10px;
+        background: grey;
     }
 
     .header {
@@ -31,38 +32,28 @@
         text-align: center;
     }
     .topnav {
-            overflow: hidden;
-            background-color: darkgrey;
-        }
+        overflow: hidden;
+        background-color: darkgrey;
+    }
 
     .topnav a {
-            float: left;
-            border-right: 1px black;
-            display: block;
-            color: white;
-            text-align: center;
-            padding: 14px 16px;
-            text-decoration: none;
-        }
-
-        /* Adds a border to all list items but the last one (last-child) */
-    .topnav:last-child {
-            border-right: none;
-        }
-
-   
-
+        float: left;
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+    }
 
     .topnav a:hover:not(.active) {
 
-            background-color: darkkhaki;
-            border-top: dimgrey;
-        }
-
+        background-color: darkkhaki;
+        border-top: dimgrey;
+    }
 
     .active {
-            background-color: #3ea841;
-        }
+        background-color: #3ea841;
+   }
 
     /* Left and right column */
     .columnleft{
@@ -95,7 +86,6 @@
         clear: both;
     }
 
-
     .footer {
         background-color: #f1f1f1;
         padding: 10px;
@@ -103,21 +93,19 @@
     }   
 
    
-
-        /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
 @media screen and (max-width: 800px) {
   .columnleft, .columnright {
     width: 100%;
     padding: 0;
    }
-
-   /* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+}
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
 @media screen and (max-width: 400px) {
   .topnav a {
     float: none;
     width: 100%;
   }
-}
 }
 </style>
 </head>
