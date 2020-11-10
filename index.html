@@ -28,7 +28,7 @@
         padding: 20px;
         text-align: center;
     }
-    .ul {
+    .topnav {
             list-style-type: none;
             margin: 0;
             padding: 0;
@@ -36,27 +36,25 @@
             background-color: darkgrey;
         }
 
-    .li {
+    .topnav a {
             float: left;
             border-right: 1px black;
-        }
-
-        /* Adds a border to all list items but the last one (last-child) */
-    .li:last-child {
-            border-right: none;
-        }
-
-    .li a {
-            float: left;
             display: block;
             color: white;
-            text-align: top center;
+            text-align: center;
             padding: 14px 16px;
             text-decoration: none;
         }
 
+        /* Adds a border to all list items but the last one (last-child) */
+    .topnav:last-child {
+            border-right: none;
+        }
 
-    .li a:hover:not(.active) {
+   
+
+
+    .topnav a:hover:not(.active) {
 
             background-color: darkkhaki;
             border-top: dimgrey;
@@ -140,7 +138,7 @@
 
 
 
-        <div class="ul">
+        <div class="topnav">
             <li><a class="active" href="#home">Home</a></li>
             <li><a href="#news">News</a></li>
             <li style="float:right"><a href="pageStucture.html" title="Page 2">Lets go to page 2</a></li>
