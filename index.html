@@ -21,14 +21,14 @@
         margin: 0;
         padding: 0;
         width: 100%;
-        background-color: burlywood;
-        position: fixed;
+        background-color: lightblue;
+        position: -webkit-sticky; /* Safari */
+        position: sticky;
         top:0;
         overflow: hidden;
     }
     .topnav {
        float: left;
-        background-color: lightblue;
     }
 
     .topnav a {  
@@ -40,7 +40,6 @@
     }
 
     .topnav a:hover:not(.active) {
-
         background-color: darkkhaki;
         border-top: dimgrey;
     }
