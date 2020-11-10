@@ -15,7 +15,9 @@
         }
     </style>
 </head>
+<head>
 <style>
+
    * {
     box-sizing: border-box;
    }
@@ -29,9 +31,6 @@
         text-align: center;
     }
     .topnav {
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
             overflow: hidden;
             background-color: darkgrey;
         }
@@ -64,11 +63,7 @@
     .active {
             background-color: #3ea841;
         }
-    /* Create three unequal columns that floats next to each other */
-    .column {
-     float: left;
-     padding: 10px;
-    }
+
     /* Left and right column */
     .columnleft{
         float: left;
@@ -113,6 +108,7 @@
 @media screen and (max-width: 800px) {
   .columnleft, .columnright {
     width: 100%;
+    padding: 0;
    }
 
    /* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
@@ -124,6 +120,7 @@
 }
 }
 </style>
+</head>
 
 <body>
 
