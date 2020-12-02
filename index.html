@@ -155,8 +155,7 @@
         overflow: hidden;
     }
     var{
-        color:black;
-        text-decoration-style: initial;
+       font: bold;
     }
 /* Keyframes specifies the animation code, here it sets what the animation will be doing*/
 @keyframes example {
@@ -225,7 +224,7 @@
             <h2> my name is Cameron</h2>
             <p> To make this website i used VSC with HTML this is the conetnet box for the middle column
             overflow:hidden is added to the ul element to prevent li elements from going outside of the list. </p>
-            <h4>Testing testing 123</h4>
+            <h4><var>Testing testing 123</var></h4>
            </div>
         </div>
 
@@ -241,9 +240,13 @@
             
 
         <div class="card">
-            <h3>Popular images by me</h3>
-            <div class ="image"><var><P>Insert Image</P></var></div><br>
-            <div class ="image"><P>Insert Image</P></div><br>
+            <h3><var>Click to Enlarge</var></h3>
+            <div class ="image">
+            <a target="_blank" href="Capture.PNG"></a>
+                <img src="Capture.PNG" alt="Failed to display image">
+            </a>
+            </div><br>
+            
             <div class ="image"><P>Insert Image</P></div>
         </div>
         <div class="card">
