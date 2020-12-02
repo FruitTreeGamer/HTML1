@@ -1,186 +1,225 @@
 <html>
+
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
 
-   * {
-    box-sizing: border-box;
-   }
-    body {
-        padding: 10px;
-        background: #f1f1f1;
-    }
+        body {
+            padding: 10px;
+            background: #f1f1f1;
+        }
 
-    .header {
-        background-color: beige;
-        padding: 30px;
-        text-align: center;
-    }
+        .header {
+            background-color: beige;
+            padding: 30px;
+            text-align: center;
+        }
 
-    .header h1{
-        font-size: 50px;
-    }
-    /* styles the nav bar*/
-    .topnav {
-      overflow: hidden;
-      background-color: lightblue;
-    }
-    .topnav a {  
-        float:left;
-        display: block;
-        color: white;
-        cursor: pointer;
-        text-align: center;
-        padding: 14px 16px;
-        text-decoration: none;
-        border: none;
-        border-radius: 15px;
-        box-shadow: 0 9px #999;
-    }
-    /*The tranform: allows for the button to change when in this case hovered over */
-    /*The translateY repositions the button which is a transform function*/
-    .topnav a:hover, .dropdown:hover .dropbtn:not(.active) {
-        background-color: darkkhaki;
-        border-top: dimgrey;
-        transform: translateY(4px);
-    }
+        .header h1 {
+            font-size: 50px;
+        }
 
-    .topnav a:active{
-        
-        box-shadow: 0 5px #666;
-        transform: translateY(4px);
-    }
+        /* styles the nav bar*/
+        .topnav {
+            overflow: hidden;
+            background-color: lightblue;
+        }
 
-    .active {
-        background-color: #3ea841;
-        color: black;
-        transform: translateY(4px);
-    }
-    /* Drop down list on Nav bar */
-    .dropdown{
-        float: left;
-        overflow: hidden;
-    }
+        .topnav a {
+            float: left;
+            display: block;
+            color: white;
+            cursor: pointer;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            border: none;
+            border-radius: 15px;
+            box-shadow: 0 9px #999;
+        }
 
-    .dropdown .dropbtn{
-        font-size: 16px;
-        border: none;
-        outline: none;
-        color: white;
-        padding: 14px 16px;
-        background-color: inherit;
-        font-family: inherit;
-        margin: 0;
-        border-radius: 15px;
-        box-shadow: 0 9px #999;
-    }
+        /*The tranform: allows for the button to change when in this case hovered over */
+        /*The translateY repositions the button which is a transform function*/
+        .topnav a:hover,
+        .dropdown:hover .dropbtn:not(.active) {
+            background-color: darkkhaki;
+            border-top: dimgrey;
+            transform: translateY(4px);
+        }
 
-    .dropdown-content{
-        display: none;
-        position: absolute;
-        background-color: lightgray;
-        min-width: 160px;
-        box-shadow: 0px 8px 16px 0px black;
-        z-index: 1;
-    }
+        .topnav a:active {
 
-    .dropdown-content a{
-        float: none;
-        color: whitesmoke;
-        padding: 12px 16px;
-        text-decoration: none;
-        display: block;
-        text-align: left;
-    }
+            box-shadow: 0 5px #666;
+            transform: translateY(4px);
+        }
 
-    .dropdown-content a:hover{
-        background-color: gray;
-    }
+        .active {
+            background-color: #3ea841;
+            color: black;
+            transform: translateY(4px);
+        }
 
-    .dropdown:hover .dropdown-content{
-        display: block;
-    }
+        /* Drop down list on Nav bar */
+        .dropdown {
+            float: left;
+            overflow: hidden;
+        }
 
-    /* Left and right column */
-    .columnleft{
-        float: left;
-        width: 75%;
-    }
+        .dropdown .dropbtn {
+            font-size: 16px;
+            border: none;
+            outline: none;
+            color: white;
+            padding: 14px 16px;
+            background-color: inherit;
+            font-family: inherit;
+            margin: 0;
+            border-radius: 15px;
+            box-shadow: 0 9px #999;
+        }
 
-    .columnright{
-        float: left;
-        width: 25%;
-        background-color: #f1f1f1;
-        padding-left: 20px;
-    }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: lightgray;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px black;
+            z-index: 1;
+        }
 
-    .image{
-        background-color: gray;
-        border: 5px solid rgb(87, 92, 87);
-        padding: 0px;
-        max-width: fit-content; 
-    }
-    /*makes a card background*/
-    .card{
-        background-color: white;
-        padding: 20px;
-        margin-top: 20px;
-    }
-    /* Clear floats after the columns */
-    .row:after {
-        content: " ";
-        display: table;
-        clear: both;
-    }
+        .dropdown-content a {
+            float: none;
+            color: whitesmoke;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
 
-    .footer {
-        background-color: lightgray;
-        padding: 10px;
-        margin-top: 20px;
-        text-align: center;
-    }   
-    img{
-       width:100%;
-       height: auto;
-        display: block;
-    }
-    /* This will be used as a refereance in Keyframes because of animation name*/
-    /*This gives the duration of the animation and starting point like colour*/
-    nav{
-        padding: 12px 16px;
-        background-color: lightblue; 
-        position: relative;
-        animation-name: example;
-        animation-duration: 10s;
-        overflow: hidden;
-    }
-    var{
-       font: bold;
-    }
-/* Keyframes specifies the animation code, here it sets what the animation will be doing*/
-@keyframes example {
-  0%   {background-color:lightblue; left:0px; top:0px;}
-  25%  {background-color:gray; left:500px; top:0px;}
-  50%  {background-color:blue; left:0px; top:0px;}
-  75%  {background-color:green; left:300px; top:0px;}
-  100% {background-color:lightblue; left:0px; top:0px;}
-}   
-/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 800px) {
-  .columnleft, .columnright {
-    width: 100%;
-    padding: 0;
-   }
-}
-/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
-@media screen and (max-width: 400px) {
-  .topnav a {
-    float: none;
-    width: 100%;
-  }
-}
+        .dropdown-content a:hover {
+            background-color: gray;
+        }
 
-</style>
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        /* Left and right column */
+        .columnleft {
+            float: left;
+            width: 75%;
+        }
+
+        .columnright {
+            float: left;
+            width: 25%;
+            background-color: #f1f1f1;
+            padding-left: 20px;
+        }
+
+        .image {
+            background-color: gray;
+            border: 5px solid rgb(87, 92, 87);
+            padding: 0px;
+            max-width: fit-content;
+        }
+
+        /*makes a card background*/
+        .card {
+            background-color: white;
+            padding: 20px;
+            margin-top: 20px;
+        }
+
+        /* Clear floats after the columns */
+        .row:after {
+            content: " ";
+            display: table;
+            clear: both;
+        }
+
+        .footer {
+            background-color: lightgray;
+            padding: 10px;
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* This will be used as a refereance in Keyframes because of animation name*/
+        /*This gives the duration of the animation and starting point like colour*/
+        nav {
+            padding: 12px 16px;
+            background-color: lightblue;
+            position: relative;
+            animation-name: example;
+            animation-duration: 10s;
+            overflow: hidden;
+        }
+
+        var {
+            font: bold;
+        }
+
+        /* Keyframes specifies the animation code, here it sets what the animation will be doing*/
+        @keyframes example {
+            0% {
+                background-color: lightblue;
+                left: 0px;
+                top: 0px;
+            }
+
+            25% {
+                background-color: gray;
+                left: 500px;
+                top: 0px;
+            }
+
+            50% {
+                background-color: blue;
+                left: 0px;
+                top: 0px;
+            }
+
+            75% {
+                background-color: green;
+                left: 300px;
+                top: 0px;
+            }
+
+            100% {
+                background-color: lightblue;
+                left: 0px;
+                top: 0px;
+            }
+        }
+
+        /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+        @media screen and (max-width: 800px) {
+
+            .columnleft,
+            .columnright {
+                width: 100%;
+                padding: 0;
+            }
+        }
+
+        /* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+        @media screen and (max-width: 400px) {
+            .topnav a {
+                float: none;
+                width: 100%;
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -192,84 +231,93 @@
         </h1>
     </div>
 
-    <div class="topnav">  
+    <div class="topnav">
         <nav></nav>
         <a class="active" href="#home">Home</a>
         <a href="#news">News</a>
-        <a href="pageStucture.html"  style="float:right">Lets go to page 2</a>
-        <div class ="dropdown">
-            <button class ="dropbtn">More
+        <a href="pageStucture.html" style="float:right">Lets go to page 2</a>
+        <div class="dropdown">
+            <button class="dropbtn">More
                 <i class="fa fa-caret-down"></i>
             </button>
-            <div class ="dropdown-content">
+            <div class="dropdown-content">
                 <a href="#about">About</a>
                 <a href="#contact">Contact Info</a>
-            </div>   
-        </div> 
+            </div>
+        </div>
     </div>
 
     <!--This adds content to the class coulumn-->
     <div class="row">
         <div class="columnleft">
-           <div class="card">
-            <h2>This is a left column</h2>
-            <h3>made using divs</h3>
-            <div class="image" >
-            <img src="responsive.PNG" alr="Failed to display image" style= "height: 200px;">
-        </div>
-            <p><var>Responsive Layouts</var></p>
-            <p>What are responsive layouts? They are used to respond to the size of the website, so if i was to shrink the size of my website the columns dont go all over the place instead they stack. <var>Try it</var>. </p>
-            <p>In my example the responsive layout will start to happen when the webpage is lower than 800px. The width is set to make sure my columns still take up the page rather than staying the same size and being too big.</p>
-        </div>
-      
-        <!--adds conent to middle column-->
-        <div class="card">
-            <h2> Code Snippets</h2>
-            <p> To make this website i used VSC with HTML this is the conetnet box for the middle column
-            overflow:hidden is added to the ul element to prevent li elements from going outside of the list. </p>
-            <h4><var>Testing testing 123</var></h4>
-           </div>
+            <div class="card">
+                <h2>This is a left column</h2>
+                <h3>made using divs</h3>
+                <div class="image">
+                    <img src="responsive.PNG" alr="Failed to display image" style="height: 200px;">
+                </div>
+                <p><var>Responsive Layouts</var></p>
+                <p>What are responsive layouts? They are used to respond to the size of the website, so if i was to
+                    shrink the size of my website the columns dont go all over the place instead they stack. <var>Try
+                        it</var>. </p>
+                <p>In my example the responsive layout will start to happen when the webpage is lower than 800px. The
+                    width is set to make sure my columns still take up the page rather than staying the same size and
+                    being too big.</p>
+            </div>
+
+            <!--adds conent to middle column-->
+            <div class="card">
+                <h2> Code Snippets</h2>
+                <p> To make this website i used VSC with HTML this is the conetnet box for the middle column
+                    overflow:hidden is added to the ul element to prevent li elements from going outside of the list.
+                </p>
+                <h4><var>Testing testing 123</var></h4>
+            </div>
         </div>
 
         <!--This Adds content to the class columnright-->
         <div class="columnright">
-           <div class = "card">
-            <h3>This is The right column</h3>
-          <div class = "image" >
-            <img src="card.PNG" alt="Failed to display image" >
-          </div>
-          <var><p>What i used .card for</p></var>
-          <p><var>.card</var> gives the website the effect of a card for the background of each column. To implement this into this column i simply put the card class inside the columnright class.</p>
-        </div>  
-          
-            
-        <!--If the images are clicked on it opens a new tab displaying them, alt is a failsafe for if the image doesnt show for whatever reason-->
-        <div class="card">
-            <h3><var>Click to Enlarge</var></h3>
-            <div class ="image">
-            <a target="_blank" href="Capture.PNG">
-                <img src="Capture.PNG" style="height: 15%; " alt="Failed to display image">
-            </a>
-            </div><br>
-            <!--<a> is used as a hyperlink to link to the image -->
-            <div class ="image">
-            <a target="_blank" href="ImageClick2.PNG">
-                <img src="ImageClick2.PNG" style="height: 15%;" alt= "Failed to display image">
-            </a>
+            <div class="card">
+                <h3>This is The right column</h3>
+                <div class="image">
+                    <img src="card.PNG" alt="Failed to display image">
+                </div>
+                <var>
+                    <p>What i used .card for</p>
+                </var>
+                <p><var>.card</var> gives the website the effect of a card for the background of each column. To
+                    implement this into this column i simply put the card class inside the columnright class.</p>
+            </div>
+
+
+            <!--If the images are clicked on it opens a new tab displaying them, alt is a failsafe for if the image doesnt show for whatever reason-->
+            <div class="card">
+                <h3><var>Click to Enlarge</var></h3>
+                <div class="image">
+                    <a target="_blank" href="Capture.PNG">
+                        <img src="Capture.PNG" style="height: 15%; " alt="Failed to display image">
+                    </a>
+                </div><br>
+                <!--<a> is used as a hyperlink to link to the image -->
+                <div class="image">
+                    <a target="_blank" href="ImageClick2.PNG">
+                        <img src="ImageClick2.PNG" style="height: 15%;" alt="Failed to display image">
+                    </a>
+                </div>
+            </div>
+            <div class="card">
+                <h3>Did you like this page</h3>
+                <p>.row after is used to clear the floats it is crucial for the site.</p>
+                <p>The animation was set using <var>@keyframes</var> this is used to specify the animation code, it sets
+                    what the animation will be doing. </p>
             </div>
         </div>
-        <div class="card">
-            <h3>Did you like this page</h3>
-            <p>.row after is used to clear the floats it is crucial for the site.</p>  
-            <p>The animation was set using <var>@keyframes</var> this is used to specify the animation code, it sets what the animation will be doing. </p>
-        </div>
-      </div>
     </div>
-    
 
-   <div class="footer">
-            <p>This is my footer</p>
-   </div>
+
+    <div class="footer">
+        <p>This is my footer</p>
+    </div>
 
 
 </body>
